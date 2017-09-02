@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { AddShoppingPage } from '../add-shopping/add-shopping';
 
 @Component({
   selector: 'page-shopping-list',
@@ -11,8 +11,8 @@ export class ShoppingListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ShoppingListPage');
+  navigateToAddShopingPage(){
+    //Navigate the user to the AddShoppingPage
+    this.navCtrl.push(AddShoppingPage);
   }
-
 }
