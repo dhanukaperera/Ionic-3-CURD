@@ -7,12 +7,14 @@ import { AngularFireModule } from 'angularfire2';
 
 import { MyApp } from './app.component';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
+import { AddShoppingPage } from '../pages/add-shopping/add-shopping';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 
 @NgModule({
   declarations: [
     MyApp,
-    ShoppingListPage
+    ShoppingListPage,
+    AddShoppingPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ShoppingListPage
+    ShoppingListPage,
+    AddShoppingPage
   ],
   providers: [
     StatusBar,
