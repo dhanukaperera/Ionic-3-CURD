@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ActionSheetController } from 'ioni
 import { AddShoppingPage } from '../add-shopping/add-shopping';
 import { AngularFireDatabase ,FirebaseListObservable} from 'angularfire2/database/';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
+import { EditShoppingItemPage } from '../edit-shopping-item/edit-shopping-item';
 
 @Component({
   selector: 'page-shopping-list',
@@ -32,6 +33,9 @@ export class ShoppingListPage {
           text:'Edit',
           handler : ()=>{
             // Send the user to the edit shoping item page and pass the paratmeter
+            this.navCtrl.push(EditShoppingItemPage,{
+              shoppingItemId:shoppingItem.$key
+            });
           },
         },
         {
